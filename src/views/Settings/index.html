@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'"
+    />
+    <meta
+      http-equiv="X-Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'"
+    />
+
+    <link rel="stylesheet" href="styles.css" />
+    <title>Configurações</title>
+  </head>
+  <body>
+    <button class="save">Salvar</button>
+
+    <aside>
+      <h1>Tangerino Helper</h1>
+    </aside>
+    <main>
+      <form>
+        <div class="auth-info">
+          <h2>Informações de autenticação</h2>
+          <div class="input-container">
+            <label for="employer-code">Código do empregador</label>
+            <input id="employer-code" name="employerCode" type="text" />
+          </div>
+          <div class="input-container">
+            <label for="pin">Pin</label>
+            <input id="pin" name="pin" type="password" />
+          </div>
+        </div>
+        <div class="work-schedule">
+          <h2>Informações de horário</h2>
+
+          <div>
+            <fieldset>
+              <div class="input-container">
+                <label for="in">Entrada</label>
+                <input id="in" name="in" type="text" />
+              </div>
+              <div class="input-container">
+                <label for="lunch-out">Saída almoço</label>
+                <input id="lunch-out" name="lunchOut" type="text" />
+              </div>
+            </fieldset>
+            <fieldset>
+              <div class="input-container">
+                <label for="lunch-in">Entrada almoço</label>
+                <input id="lunch-in" name="lunchIn" type="text" />
+              </div>
+              <div class="input-container">
+                <label for="out">Saída</label>
+                <input id="out" name="out" type="text" />
+              </div>
+            </fieldset>
+          </div>
+        </div>
+      </form>
+    </main>
+  </body>
+</html>

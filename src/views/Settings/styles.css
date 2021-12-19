@@ -1,0 +1,128 @@
+/* roboto-slab-regular - latin */
+@font-face {
+  font-family: "Roboto Slab";
+  font-style: normal;
+  font-weight: 400;
+  src: local(""),
+    url("../../../assets/fonts/roboto-slab-v16-latin-regular.woff2") format("woff2"),
+    /* Chrome 26+, Opera 23+, Firefox 39+ */
+      url("../../../assets/fonts/roboto-slab-v16-latin-regular.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* roboto-slab-600 - latin */
+@font-face {
+  font-family: "Roboto Slab";
+  font-style: normal;
+  font-weight: 600;
+  src: local(""),
+    url("../../../assets/fonts/roboto-slab-v16-latin-600.woff2") format("woff2"),
+    /* Chrome 26+, Opera 23+, Firefox 39+ */
+      url("../../../assets/fonts/roboto-slab-v16-latin-600.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+* {
+  font-family: "Roboto Slab", serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: #003049;
+}
+
+body {
+  height: 100vh;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+aside {
+  position: relative;
+  width: 60px;
+  height: 100vh;
+  background-color: #f77f00;
+}
+
+h1 {
+  position: absolute;
+  bottom: 80px;
+  left: -60px;
+
+  display: inline-block;
+  margin-bottom: 1.5rem;
+
+  white-space: nowrap;
+  transform: rotate(-90deg);
+  color: #f0e9c9;
+}
+
+main {
+  padding: 0 20px;
+  flex: 1;
+}
+
+h2 {
+  margin-bottom: 0.75rem;
+}
+
+fieldset {
+  flex: 1;
+  border: none;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.75rem;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+
+  row-gap: 0.4rem;
+}
+
+.work-schedule > div {
+  display: flex;
+
+  column-gap: 0.75rem;
+}
+
+input {
+  height: 38px;
+  padding: 0 15px;
+  border-radius: 5px;
+
+  border: solid 1px #2d4263;
+}
+
+.save {
+  position: fixed;
+  top: 20px;
+  right: 24px;
+  padding: 8px 10px;
+
+  border-radius: 5px;
+  background-color: #003049;
+  border: none;
+  color: white;
+
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.save:hover {
+  filter: brightness(1.2);
+}
+
+@keyframes rotate {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
