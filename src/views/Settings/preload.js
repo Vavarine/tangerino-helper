@@ -1,3 +1,4 @@
+const { powerSaveBlocker } = require('electron');
 const Store = require('electron-store');
 
 const store = new Store();
@@ -14,7 +15,11 @@ window.addEventListener('DOMContentLoaded', () => {
       console.log(key)
       const input = inputs.filter(input => input.name === key)[0]
       console.log(input)
-      input.value = storedSettings[key]
+
+      try {
+        input.value = storedSettings[key]
+      } catch (error) {
+      }
     })
   }
 
@@ -23,7 +28,14 @@ window.addEventListener('DOMContentLoaded', () => {
       return { ...acc, [input.name]: input.value }
     }, {})
 
-    console.log(settings)
+    const buttonText = save.textContent
+
+    save.textContent = "Salvo!"
+
+    setTimeout(() => {
+      save.textContent = buttonText
+    }, 2000)
+
     store.set('settings', settings)
   })
 })
